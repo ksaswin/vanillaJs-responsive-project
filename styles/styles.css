@@ -1,0 +1,146 @@
+@import 'design-tokens.css';
+
+body {
+	margin: 0;
+	background: var(--color-faded-white);
+}
+
+header {
+	display: none;
+}
+
+.container {
+	display: flex;
+	height: 90vh;
+}
+
+.card-container {
+	flex: 2;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card > p {
+	margin: 0;
+	color: var(--color-white);
+	font-size: 100px;
+}
+
+.card-color-faded-blue {
+	background-color: var(--color-faded-blue);
+}
+
+.card-color-dark-blue {
+	background-color: var(--color-dark-blue);
+}
+
+.card-color-saturated-blue {
+	background-color: var(--color-saturated-blue);
+}
+
+.card-color-grey {
+	background-color: var(--color-grey);
+}
+
+.actions-container {
+	flex: 0.5;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	gap: 22px;
+	padding: 32px 25px 0 25px;
+}
+
+.actions-container > button {
+	text-transform: uppercase;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+	background-color: var(--color-light-blue);
+	box-shadow: 0 5px var(--color-dark-blue);
+	color: var(--color-white);
+}
+
+footer > p {
+	padding-top: 10px;
+	font-size: 12px;
+	text-align: center;
+	margin: 0;
+}
+
+@media screen and (max-width: 375px) {
+	body {
+		background: var(--color-white);
+	}
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--color-dark-grey);
+		height: 40px;
+	}
+
+	header > p {
+		margin: 0;
+		color: var(--color-white);
+	}
+
+	.container {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		gap: 12px;
+	}
+
+	.card-container {
+		flex: auto;
+		padding: 0 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.card {
+		height: 50px;
+	}
+
+	.card > p {
+		font-size: 16px;
+		color: var(--color-black);
+	}
+
+	.card-color-faded-blue {
+		background: linear-gradient(to right, var(--color-faded-blue) 2%, var(--color-faded-white) 2%);
+	}
+
+	.card-color-dark-blue {
+		background: linear-gradient(to right, var(--color-dark-blue) 2%, var(--color-faded-white) 2%);
+	}
+
+	.card-color-saturated-blue {
+		background: linear-gradient(to right, var(--color-saturated-blue) 2%, var(--color-faded-white) 2%);
+	}
+
+	.card-color-grey {
+		background: linear-gradient(to right, var(--color-grey) 2%, var(--color-faded-white) 2%);
+	}
+
+	.actions-container {
+		flex: none;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		padding: 10px 80px;
+	}
+
+	.actions-container > button {
+		flex: 1;
+	}
+}
